@@ -4,90 +4,161 @@
     margin: 0;
 }
 
-body{
+body {
     background-color: #D8E1FB;
 }
 
-.nav-color{
+.nav-color {
     background-color: #B9CBFF;
 }
 
-.nav-color-a:hover{
+.nav-color-a:hover {
     background-color: rgba(240, 240, 240, 0.2);
     border-radius: 3px;
 }
 
-.img-perfil{
+.img-perfil {
     margin-left: 2rem;
     margin-top: 2rem;
     border-radius: 50%;
 }
 
-.img-texto{
+.img-texto {
     margin-left: 2rem;
     margin-top: 2rem;
 }
 
-.margen-div{
+.margen-div {
     margin-left: 3rem;
     margin-top: 2rem;
 }
 
-.redes-sociales{
+.redes-sociales {
     display: flex;
     justify-content: center;
 }
 
-.footer-fb{
+.footer-fb {
     color: blue;
     font-size: 2rem
 }
 
-.footer-gh{
+.footer-gh {
     margin-left: 0.5rem;
     color: black;
     font-size: 2rem;
 }
 
 /*TRABAJO*/
-.seccion-trabajo-flex{
+.seccion-trabajo-flex {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.div-list-edit{
+.div-list-edit {
     width: 50%;
     text-align: center;
 }
 
-.seccion-margen{
+.seccion-margen {
     margin-top: 4rem;
     background-color: #B9CBFF;
     border-radius: 15px 50px 30px 5px;
 }
 
-.h4-trabajo{
+.h4-trabajo {
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
 
 /*CONTACTO*/
-.form-edit{
+.form-edit {
     margin-top: 1rem;
 }
 
 .inicio-anim {
-    animation: fadein 2.5s; 
-   }
-   @keyframes fadein {
+    animation: fadein 2.5s;
+}
+
+@keyframes fadein {
     0% {
-    opacity:0;
+        opacity: 0;
     }
-    50%{
-    opacity:0.5;
+
+    50% {
+        opacity: 0.5;
     }
+
     100% {
-    opacity:1;
+        opacity: 1;
     }
+}
+
+/* LINEA DEL TIEMPO CSS */
+.linea-tiempo {
+    position: relative;
+    width: 500px;
+    max-width: 95vw;
+    height: 100%;
+    font-family: Arial;
+}
+
+.momento {
+    position: relative;
+    width: 45%;
+    box-sizing: border-box;
+}
+
+.momento:nth-child(even) {
+    left: 55%;
+}
+
+.linea-tiempo::before {
+    content: '';
+    position: absolute;
+    width: 3px;
+    background-color: #000;
+    left: 50%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.momento::after {
+    content: '';
+    position: absolute;
+    top: calc(50% + 10px);
+    right: calc(-11.11% - 11.5px);
+    height: 20px;
+    width: 20px;
+    background-color: #000;
+    border-radius: 50%;
+}
+
+.momento:nth-child(even)::after {
+    left: calc(-11.11% - 8.5px);
+}
+
+.centrar{
+    display: flex;
+    justify-content: center;
+}
+
+
+.tiempo-anim1 {
+    animation: fadein 1s;
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.tiempo-p-izq{
+    text-align: end;
 }
